@@ -20,7 +20,7 @@ class SocialiteController extends Controller
         $authUser = $this->findOrCreateUser($user, 'google');
         Auth::login($authUser, true);
 
-        return redirect('/home');
+        return redirect('/konsultasi');
     }
 
     public function findOrCreateUser($user, $provider)
