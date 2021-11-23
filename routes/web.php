@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CreateUserController;
 use App\Http\Controllers\SocialiteController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -18,6 +19,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return redirect()->to('/konsultasi');
 });
+
+Route::get('/create_user', [CreateUserController::class, 'index']);
 
 Auth::routes();
 
