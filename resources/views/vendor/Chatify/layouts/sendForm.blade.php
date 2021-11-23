@@ -4,7 +4,7 @@
         <label><span class="fas fa-paperclip"></span><input disabled='disabled' type="file" class="upload-attachment"
                 name="file" accept="image/*, .txt, .rar, .zip" /></label>
         <textarea readonly='readonly' name="message" class="m-send app-scroll"
-            placeholder="Type a message.."><a href="http://jakpintas.dpmptsp-dki.com">Lokasi Peta</a></textarea>
+            placeholder="Type a message..">http://jakpintas.dpmptsp-dki.com</textarea>
         <button disabled='disabled'><span class="fas fa-paper-plane"></span></button>
     </form>
 </div>
