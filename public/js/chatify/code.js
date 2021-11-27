@@ -1321,11 +1321,4 @@ $(document).ready(function () {
 // messengerSearch("asnur");
 // $('.messenger-tab[data-view="search"]').show();
 
-$(window).on("load", function () {
-    $(".messenger-list-item[data-contact='9']").trigger("click");
-    $(".messenger-list-item[data-contact='9']").on("click", function () {
-        console.log("test");
-    });
-});
-
-$("#message-form .m-send").val("asdasdasdasd");
+// $("#message-form .m-send").val("asdasdasdasd");

@@ -2,7 +2,7 @@
 @if ($viewType == 'default')
     @if ($from_id != $to_id)
         <div class="message-card" data-id="{{ $id }}">
-            <p>{!! $message == null && $attachment != null && @$attachment[2] != 'file' ? $attachment[1] : nl2br($message) !!}
+            <p>{!! $message == null && $attachment != null && @$attachment[2] != 'file' ? $attachment[1] : nl2br(url_detection($message)) !!}
                 <sub title="{{ $fullTime }}">{{ $time }}</sub>
                 {{-- If attachment is a file --}}
                 @if (@$attachment[2] == 'file')
