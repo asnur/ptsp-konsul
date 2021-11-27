@@ -33,7 +33,7 @@ return [
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => 'http://103.146.202.108/auth/callback',
+        'redirect' => 'https://jakpintas.dpmptsp-dki.com/chat/auth/callback',
     ],
 
 ];
