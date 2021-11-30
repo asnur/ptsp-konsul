@@ -83,10 +83,10 @@
                                     <button type="submit" class="btn btn-primary w-100">
                                         <i class="fa fa-sign-in"></i> {{ __('Login') }}
                                     </button>
-                                    {{-- <a href="{{ route('login-google') }}" class="btn btn-danger">
+                                    <a href="{{ route('login-google') }}" class="btn btn-danger w-100 mt-4">
                                         <i class="fa fa-google" aria-hidden="true"></i> {{ __('Login with Google') }}
                                     </a>
-
+                                {{--
                                     @if (Route::has('password.request'))
                                         <a class="btn btn-link" href="{{ route('password.request') }}">
                                             {{ __('Forgot Your Password?') }}

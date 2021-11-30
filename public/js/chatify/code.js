@@ -426,6 +426,7 @@ function sendMessage() {
                 $("#message-form").trigger("reset");
                 cancelAttachment();
                 messageInput.focus();
+                $(".m-send").val('');
             },
             success: (data) => {
                 console.log(data.tempID);
@@ -451,6 +452,8 @@ function sendMessage() {
                     scrollBottom(messagesContainer);
                     // send contact item updates
                     sendContactItemUpdates(true);
+                    $("#message-form").trigger("reset");
+                    console.log($(".m-send").val(''));
                 }
             },
             error: () => {
@@ -725,6 +728,12 @@ function getContacts() {
             $(".listOfContacts").html(data.contacts);
             // update data-action required with [responsive design]
             cssMediaQueries();
+            if (id_admin > 0) {
+                $('.message-admin').hide();
+                $('body').find('.listOfContacts').find(".messenger-list-item[data-contact=" + id_admin + "]").click();
+                $('.m-send').val(`Saya ingin konsultasi mengenai daerah yang tertera pada https://jakpintas.dpmptsp-dki.com/chat/pdf_file/${name_file}`)
+                $("#message-form").submit();
+            }
         },
         error: () => {
             console.error("Server error, check your response");
@@ -1090,6 +1099,8 @@ $(document).ready(function () {
     $("#message-form").on("submit", (e) => {
         e.preventDefault();
         sendMessage();
+        $(".m-send").val('');
+        
     });
 
     // message input on keyup [Enter to send, Enter+Shift for new line]
@@ -1101,6 +1112,7 @@ $(document).ready(function () {
             if (!e.shiftKey) {
                 triggered = isTyping(false);
                 sendMessage();
+                $(".m-send").val('');
             }
         }
     });
@@ -1316,6 +1328,8 @@ $(document).ready(function () {
         }
     });
 });
+
+
 
 // $(".messenger-search").val("asnur").trigger("focus");
 // messengerSearch("asnur");

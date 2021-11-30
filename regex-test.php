@@ -1,8 +1,4 @@
 <?php
-
-use Illuminate\Http\Response;
-use Illuminate\Support\Facades\Cookie;
-
 function url_detection($text)
 {
     $url_jakpintas = 'jakpintas.dpmptsp-dki.com';
@@ -15,10 +11,4 @@ function url_detection($text)
     return $string;
 }
 
-function set_cookie($kelurahan)
-{
-    $response = new Response();
-    $response->withCookie(cookie('kelurahan', $kelurahan, 3600));
-
-    return $response;
-}
+echo url_detection('asnur https://odd.com/chat/pdf_file/123012.pdf');

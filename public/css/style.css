@@ -33,7 +33,7 @@
 .bg-login {
     height: 100vh;
     overflow: hidden;
-    background-image: url("/chat/img/bg-login.jpg");
+    background-image: url("/img/bg-login.jpg");
     background-repeat: no-repeat;
 }
 

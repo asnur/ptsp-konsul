@@ -1,7 +1,9 @@
 /node_modules
 /public/hot
 /storage/*.key
+/public/pdf_file/*
 /vendor
+.env
 .env.backup
 .phpunit.result.cache
 docker-compose.override.yml

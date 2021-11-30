@@ -14,18 +14,13 @@
         }
     });
 </script>
+@php
+$name_file = Cookie::get('name_file');
+@endphp
 <script src="{{ asset('js/chatify/code.js') }}"></script>
 <script>
     // Messenger global variable - 0 by default
     messenger = "{{ @$id }}";
     id_admin = "{{ @$id_admin }}";
-    if (id_admin != 0) {
-        $(window).on("load", function() {
-            $(`.messenger-list-item[data-contact='${id_admin}']:eq(0)`).hide();
-            $(`.messenger-list-item[data-contact='${id_admin}']`).trigger("click");
-            $(`.messenger-list-item[data-contact='${id_admin}']`).on("click", function() {
-                console.log("test");
-            });
-        });
-    }
+    name_file = "{{ @$name_file }}";
 </script>
